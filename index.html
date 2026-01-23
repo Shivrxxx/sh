@@ -5,77 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sivaramkumar | Portfolio</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-  
-<!-- NAVBAR -->
-<nav class="navbar">
-  <!-- Left: Signature -->
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
   <div class="nav-left">
-    <img
-      id="signatureImg"
-      class="signature"
-      alt="Signature"
-    />
+    <img src="assets/sivaramkumar-sign.png" alt="Signature" class="nav-signature">
   </div>
 
-  <!-- Right: Menu + Toggle -->
-  <div class="nav-right">
-    <a href="#home" class="active">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-
-    <<img id="signatureImg" />
-<button id="themeToggle">
-  <i class="fa-solid fa-moon"></i>
-</button>
-  </div>
-</nav>
-
-<!-- ================= MOBILE MENU ================= -->
-<div class="mobile-menu">
-  <a href="#home">Home</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</div>
+  <nav class="nav-right">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <span class="theme-toggle">🌙</span>
+  </nav>
+</header>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
-  <div class="hero-content reveal">
+  <div class="hero-content">
 
     <div class="available">
       <span class="dot"></span> Available for Work
     </div>
 
     <h1>Hello, I'm</h1>
-    <img src="assets/signature-light.png" class="signature" alt="Sivaramkumar">
+    <img src="assets/sivaramkumar-sign.png" class="signature" alt="Sivaramkumar">
 
     <h2>Designer / Digital Marketer / Beginner Web Developer</h2>
 
     <p class="description">
-      I'm a creative designer and digital marketer who loves turning ideas into visuals that connect with people and drive results.
+      I'm a creative designer and digital marketer who loves turning ideas into visuals
+      that connect with people and drive results.
     </p>
 
     <div class="buttons">
-      <a href="assets/resume.pdf" class="btn primary" download>
-        <i class="fa-solid fa-download"></i> Download Resume
-      </a>
-      <a href="#projects" class="btn secondary">
-        <i class="fa-solid fa-eye"></i> View My Work
-      </a>
+      <a href="assets/resume.pdf" class="btn primary" download>Download Resume</a>
+      <a href="#projects" class="btn secondary">View My Work</a>
     </div>
 
     <div class="stats">
@@ -83,54 +58,55 @@
       <div class="stat"><h3>2+</h3><span>Years Exp</span></div>
       <div class="stat"><h3>100%</h3><span>Client Satisfaction</span></div>
     </div>
+
   </div>
 
-  <div class="hero-image reveal">
+  <div class="hero-image">
     <img src="assets/profile.jpg" alt="Profile">
   </div>
 </section>
 
 <!-- ================= SKILLS ================= -->
 <section class="skills-section" id="skills">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Skills & Expertise</h2>
-    <p>A comprehensive skill set spanning design, digital marketing, and web development to create impactful digital experiences.</p>
+    <p>A comprehensive skill set spanning design, digital marketing, and web development.</p>
   </div>
 
   <div class="skills-grid">
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-pen-nib"></i> Design Tools</h3><div class="skill-tags"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Figma</span><span>Canva</span><span>Adobe XD</span></div></div>
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-bullhorn"></i> Digital Marketing</h3><div class="skill-tags"><span>SEO</span><span>Social Media Marketing</span><span>Content Marketing</span><span>Google Analytics</span><span>Email Marketing</span></div></div>
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-code"></i> Web Development</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>Git</span></div></div>
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-layer-group"></i> UI / UX Design</h3><div class="skill-tags"><span>User Interface</span><span>User Experience</span><span>Wireframing</span><span>Prototyping</span><span>Visual Design</span></div></div>
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-palette"></i> Creative Skills</h3><div class="skill-tags"><span>Ad Creatives</span><span>Banner Design</span><span>Logo Design</span><span>Brand Identity</span><span>Typography</span></div></div>
-    <div class="skill-card reveal"><h3><i class="fa-solid fa-chart-line"></i> Marketing Strategy</h3><div class="skill-tags"><span>Brand Strategy</span><span>Content Strategy</span><span>Campaign Planning</span><span>Performance Analysis</span></div></div>
+    <div class="skill-card"><h3>Design Tools</h3><div class="skill-tags"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Figma</span><span>Canva</span><span>Adobe XD</span></div></div>
+    <div class="skill-card"><h3>Digital Marketing</h3><div class="skill-tags"><span>SEO</span><span>Social Media Marketing</span><span>Content Marketing</span><span>Google Analytics</span><span>Email Marketing</span></div></div>
+    <div class="skill-card"><h3>Web Development</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>Git</span></div></div>
+    <div class="skill-card"><h3>UI / UX Design</h3><div class="skill-tags"><span>User Interface Design</span><span>User Experience</span><span>Wireframing</span><span>Prototyping</span><span>Visual Design</span></div></div>
+    <div class="skill-card"><h3>Creative Skills</h3><div class="skill-tags"><span>Ad Creatives</span><span>Banner Design</span><span>Logo Design</span><span>Brand Identity</span><span>Typography</span></div></div>
+    <div class="skill-card"><h3>Marketing Strategy</h3><div class="skill-tags"><span>Brand Strategy</span><span>Content Strategy</span><span>Campaign Planning</span><span>Performance Analysis</span></div></div>
   </div>
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
 <section class="experience-section" id="experience">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Experience & Projects</h2>
-    <p>My journey in design, digital marketing, and web development, showcasing hands-on experience and continuous learning.</p>
+    <p>My journey in design, digital marketing, and web development.</p>
   </div>
 
   <div class="timeline">
-    <div class="timeline-item left reveal">
+    <div class="timeline-item left">
       <span class="timeline-dot"></span>
       <div class="timeline-card">
         <h3>Designer & Digital Marketer</h3>
         <span class="timeline-date">2023 – Present · Freelance · Remote</span>
-        <p>Creating eye-catching visual designs, social media creatives, and digital marketing campaigns. Managing SEO, content strategy, and brand identity.</p>
+        <p>Creating eye-catching designs, SEO campaigns, brand identities, and responsive websites.</p>
         <div class="skill-tags"><span>Adobe Photoshop</span><span>Figma</span><span>SEO</span><span>HTML</span><span>CSS</span></div>
       </div>
     </div>
 
-    <div class="timeline-item right reveal">
+    <div class="timeline-item right">
       <span class="timeline-dot"></span>
       <div class="timeline-card">
         <h3>Web Design & Marketing Projects</h3>
         <span class="timeline-date">2022 – 2023 · Personal Projects · Remote</span>
-        <p>Developed personal portfolio websites and learning-based tools. Focused on web fundamentals and UI/UX principles.</p>
+        <p>Developed portfolio websites and learning-based tools with strong UI/UX fundamentals.</p>
         <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canva</span><span>Content Creation</span></div>
       </div>
     </div>
@@ -139,67 +115,128 @@
 
 <!-- ================= PROJECTS ================= -->
 <section class="projects-section" id="projects">
-  <div class="section-header reveal">
+
+  <div class="section-header">
     <h2>Featured Projects</h2>
     <p>Explore my work across web development and digital design</p>
   </div>
 
+  <!-- WEB DEVELOPMENT -->
   <h3 class="project-category">— Web Development</h3>
+
   <div class="projects-grid">
+
+    <!-- Project 1 -->
     <div class="project-card reveal">
-      <h4>Website Spam Detection</h4>
-      <p>An intelligent spam detection system that identifies and filters spam content.</p>
-      <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Machine Learning</span></div>
+      <div class="project-media">
+        <img src="assets/project-1.jpg" alt="Website Spam Detection">
+      </div>
+      <div class="project-content">
+        <h4>Website Spam Detection</h4>
+        <p>
+          An intelligent spam detection system that helps identify and filter spam
+          content on websites using modern web technologies.
+        </p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Machine Learning</span>
+        </div>
+      </div>
     </div>
 
+    <!-- Project 2 -->
     <div class="project-card reveal">
-      <h4>Personal Portfolio Website</h4>
-      <p>A responsive portfolio website showcasing skills, projects, and experience.</p>
-      <div class="skill-tags"><span>HTML</span><span>CSS</span><span>Responsive Design</span></div>
+      <div class="project-media">
+        <img src="assets/project-2.jpg" alt="Personal Portfolio Website">
+      </div>
+      <div class="project-content">
+        <h4>Personal Portfolio Website</h4>
+        <p>
+          A responsive portfolio website showcasing skills, projects, and
+          professional experience with smooth animations.
+        </p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Responsive Design</span>
+        </div>
+      </div>
     </div>
+
   </div>
 
+  <!-- DIGITAL DESIGN & MARKETING -->
   <h3 class="project-category">— Digital Design & Marketing</h3>
+
   <div class="projects-grid">
+
+    <!-- Project 3 -->
     <div class="project-card reveal">
-      <h4>Brand Identity Design</h4>
-      <p>Creative brand identity projects including logos, palettes, and guidelines.</p>
-      <div class="skill-tags"><span>Adobe Photoshop</span><span>Illustrator</span><span>Figma</span></div>
+      <div class="project-media">
+        <img src="assets/project-3.jpg" alt="Brand Identity Design">
+      </div>
+      <div class="project-content">
+        <h4>Brand Identity Design</h4>
+        <p>
+          Creative brand identity projects including logo design, color palettes,
+          and visual guidelines that strengthen brand presence.
+        </p>
+        <div class="skill-tags">
+          <span>Adobe Photoshop</span>
+          <span>Illustrator</span>
+          <span>Figma</span>
+        </div>
+      </div>
     </div>
 
+    <!-- Project 4 -->
     <div class="project-card reveal">
-      <h4>Social Media Campaigns</h4>
-      <p>Engaging ad campaigns designed to boost brand visibility and conversions.</p>
-      <div class="skill-tags"><span>Canva</span><span>Adobe XD</span><span>Social Media Marketing</span></div>
+      <div class="project-media">
+        <img src="assets/project-4.jpg" alt="Social Media Campaigns">
+      </div>
+      <div class="project-content">
+        <h4>Social Media Campaigns</h4>
+        <p>
+          Engaging social media creatives and ad campaigns designed to boost brand
+          visibility and conversions across platforms.
+        </p>
+        <div class="skill-tags">
+          <span>Canva</span>
+          <span>Adobe XD</span>
+          <span>Social Media Marketing</span>
+        </div>
+      </div>
     </div>
+
   </div>
-</section>
 
+</section>
 <!-- ================= CONTACT ================= -->
 <section class="contact-section" id="contact">
-  <div class="section-header reveal">
+  <div class="section-header">
     <h2>Let’s Work Together</h2>
     <p>Ready to bring your next project to life? Let’s connect.</p>
   </div>
 
   <div class="contact-cards">
-    <div class="contact-card"><i class="fa-solid fa-envelope"></i> Email <strong>shivxxx@gmail.com</strong></div>
-    <div class="contact-card"><i class="fa-solid fa-phone"></i> Phone <strong>+91 86672 31973</strong></div>
+    <div class="contact-card">✉ Email <strong>shivxxx@gmail.com</strong></div>
+    <div class="contact-card">📞 Phone <strong>+91 86672 31973</strong></div>
   </div>
 
   <div class="social-card">
     <h3>Connect With Me</h3>
     <p>Follow my work and stay updated</p>
     <div class="social-links">
-      <a><i class="fa-brands fa-github"></i> GitHub</a>
-      <a><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a><i class="fa-brands fa-behance"></i> Behance</a>
-      <a><i class="fa-solid fa-envelope"></i> Email</a>
+      <a>GitHub</a><a>LinkedIn</a><a>Behance</a><a>Email</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Sivaramkumar. All rights reserved.</footer>
+<footer>
+  © 2026 Sivaramkumar. All rights reserved.
+</footer>
 
 <script src="script.js"></script>
 </body>
