@@ -89,7 +89,12 @@ section {
 }
 
 .nav-signature {
-  height: 36px;
+  height: 36px;        /* fixed size */
+  width: auto;
+  display: block;
+  margin: 0;           /* no shifting */
+  padding: 0;
+  transition: opacity 0.25s ease; /* smooth fade only */
 }
 
 .nav-links {
@@ -624,3 +629,4 @@ footer {
     flex-direction: column;
   }
 }
+
