@@ -36,6 +36,16 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.2 });
+const navLogo = document.getElementById("siteLogo");
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  const isLight = document.body.classList.contains("light");
+
+  navLogo.src = isLight
+    ? "assets/signature-light.png"
+    : "assets/signature-dark.png";
+});
 
 const themeToggle = document.getElementById("themeToggle");
 const logo = document.getElementById("siteLogo");
