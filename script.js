@@ -1,11 +1,34 @@
 // THEME TOGGLE
-const toggle = document.getElementById("themeToggle");
 const body = document.body;
-toggle.addEventListener("click", () => {
-  body.classList.toggle("light");
-  toggle.innerHTML = body.classList.contains("light")
-    ? '<i class="fa-solid fa-sun"></i>'
-    : '<i class="fa-solid fa-moon"></i>';
+const toggleBtn = document.getElementById("themeToggle");
+const signatureImg = document.getElementById("signatureImg");
+
+/* Apply theme */
+function applyTheme(theme) {
+  if (theme === "dark") {
+    body.classList.remove("light");
+    body.classList.add("dark");
+    signatureImg.src = "assets/signature-light.png";
+    toggleBtn.textContent = "☀";
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    signatureImg.src = "assets/signature-dark.png";
+    toggleBtn.textContent = "☾";
+  }
+
+  localStorage.setItem("theme", theme);
+}
+
+/* Load saved theme (default = light) */
+const savedTheme = localStorage.getItem("theme") || "light";
+applyTheme(savedTheme);
+
+/* Toggle */
+toggleBtn.addEventListener("click", () => {
+  const currentTheme = body.classList.contains("dark") ? "dark" : "light";
+  const nextTheme = currentTheme === "dark" ? "light" : "dark";
+  applyTheme(nextTheme);
 });
 
 // MOBILE MENU
@@ -38,35 +61,5 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 reveals.forEach(el => observer.observe(el));
-const body = document.body;
-const toggleBtn = document.getElementById("themeToggle");
-const signatureImg = document.getElementById("signatureImg");
 
-/* Apply theme */
-function applyTheme(theme) {
-  if (theme === "dark") {
-    body.classList.remove("light");
-    body.classList.add("dark");
-    signatureImg.src = "assets/signature-light.png";
-    toggleBtn.textContent = "☀";
-  } else {
-    body.classList.remove("dark");
-    body.classList.add("light");
-    signatureImg.src = "assets/signature-dark.png";
-    toggleBtn.textContent = "☾";
-  }
-
-  localStorage.setItem("theme", theme);
-}
-
-/* Load saved theme (default = light) */
-const savedTheme = localStorage.getItem("theme") || "light";
-applyTheme(savedTheme);
-
-/* Toggle */
-toggleBtn.addEventListener("click", () => {
-  const currentTheme = body.classList.contains("dark") ? "dark" : "light";
-  const nextTheme = currentTheme === "dark" ? "light" : "dark";
-  applyTheme(nextTheme);
-});
 
