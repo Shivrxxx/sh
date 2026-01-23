@@ -338,11 +338,14 @@ section {
 /* ================= PROJECTS ================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 520px);
   gap: 28px;
+  justify-content: center;
 }
 
 .project-card {
+  width: 520px;
+  height: 400px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -357,7 +360,7 @@ section {
 
 .project-media {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 240px; /* fixed media height to fit 400px card */
   overflow: hidden;
 }
 
@@ -373,7 +376,7 @@ section {
 }
 
 .project-content {
-  padding: 26px;
+  padding: 20px;
 }
 
 .view-work {
