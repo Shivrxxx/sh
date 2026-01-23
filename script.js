@@ -24,22 +24,26 @@ if (themeToggle) {
     body.classList.toggle("light");
     const isLight = body.classList.contains("light");
 
+    /* ICON SWITCH (NO TEXT) */
     themeToggle.textContent = isLight ? "☀️" : "🌙";
 
+    /* LOGO SOURCE */
     const newSrc = isLight
       ? "assets/signature-dark.png"
       : "assets/signature-light.png";
 
+    /* SMOOTH LOGO SWAP */
     [navLogo, heroLogo].forEach(logo => {
       if (!logo) return;
       logo.style.opacity = "0";
       setTimeout(() => {
         logo.src = newSrc;
         logo.style.opacity = "1";
-      }, 160);
+      }, 150);
     });
   });
 }
+
 
 /* =========================================================
    STAGGERED HERO TEXT (WORD BY WORD)
