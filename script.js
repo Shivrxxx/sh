@@ -29,8 +29,8 @@ if (themeToggle) {
 
     // Smooth logo swap (same place, no movement)
     const newSrc = isLight
-      ? "assets/signature-light.png"
-      : "assets/signature-dark.png";
+      ? "assets/signature-dark.png"
+      : "assets/signature-light.png";
 
     [navLogo, heroLogo].forEach(logo => {
       if (!logo) return;
