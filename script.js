@@ -24,14 +24,15 @@ if (themeToggle) {
     body.classList.toggle("light");
     const isLight = body.classList.contains("light");
 
-    // Update toggle text
-    themeToggle.textContent = isLight ? "Dark" : "Light";
+    /* ICON SWITCH (NO TEXT) */
+    themeToggle.textContent = isLight ? "☀️" : "🌙";
 
-    // Smooth logo swap (same place, no movement)
+    /* LOGO SOURCE */
     const newSrc = isLight
       ? "assets/signature-dark.png"
       : "assets/signature-light.png";
 
+    /* SMOOTH LOGO SWAP */
     [navLogo, heroLogo].forEach(logo => {
       if (!logo) return;
       logo.style.opacity = "0";
@@ -42,6 +43,7 @@ if (themeToggle) {
     });
   });
 }
+
 
 /* =========================================================
    STAGGERED HERO TEXT (WORD BY WORD)
