@@ -258,7 +258,7 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
-..availability {
+.availability {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -268,19 +268,23 @@ section {
   border: 1px solid rgba(0, 255, 120, 0.4);
   color: #eafff4;
   font-size: 14px;
+  line-height: 1;
 }
 
-/* DOT */
+/* DOT — IMPORTANT FIXES */
 .status-dot {
   width: 8px;
   height: 8px;
-  background: #00ff78;
+  min-width: 8px;      /* 🔑 prevents flex collapse */
+  min-height: 8px;
+  background-color: #00ff78;
   border-radius: 50%;
-  position: relative;
+  display: inline-block;
+  flex-shrink: 0;      /* 🔑 prevents disappearing */
   animation: dot-pulse 1.6s infinite ease-in-out;
 }
 
-/* PULSE ANIMATION */
+/* PULSE */
 @keyframes dot-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 255, 120, 0.7);
@@ -293,10 +297,10 @@ section {
   }
 }
 
-/* TEXT (STATIC) */
 .status-text {
   white-space: nowrap;
 }
+
 
 .hero h1 {
   font-family: "Space Grotesk", sans-serif;
