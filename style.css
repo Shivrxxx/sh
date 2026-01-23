@@ -18,6 +18,20 @@ body.light {
   --muted: #555;
   --accent: #111;
 }
+body.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+.signature {
+  height: 32px;
+  width: auto;
+}
 
 /* ================= RESET ================= */
 * {
