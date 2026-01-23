@@ -59,3 +59,15 @@ themeToggle.addEventListener("click", () => {
     logo.style.opacity = "1";
   }, 150);
 });
+// On load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+  document.body.classList.add("light");
+  logo.src = "assets/signature-light.png";
+}
+
+// Save on toggle
+themeToggle.addEventListener("click", () => {
+  const isLight = document.body.classList.contains("light");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
