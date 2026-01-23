@@ -1,42 +1,47 @@
-const body = document.body;
-const toggleBtn = document.getElementById("themeToggle");
-const toggleIcon = toggleBtn.querySelector("i");
-const signatureImg = document.getElementById("signatureImg");
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  const toggleBtn = document.getElementById("themeToggle");
+  const signatureImg = document.getElementById("signatureImg");
 
-/* Apply theme */
-function applyTheme(theme) {
-  if (theme === "dark") {
-    body.classList.add("dark");
-    body.classList.remove("light");
+  // If navbar is not on this page, EXIT safely
+  if (!toggleBtn || !signatureImg) return;
 
-    // Toggle icon
-    toggleIcon.classList.remove("fa-moon");
-    toggleIcon.classList.add("fa-sun");
+  const toggleIcon = toggleBtn.querySelector("i");
 
-    // Signature image
-    signatureImg.src = "assets/signature-light.png";
-  } else {
-    body.classList.add("light");
-    body.classList.remove("dark");
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      body.classList.add("dark");
+      body.classList.remove("light");
 
-    // Toggle icon
-    toggleIcon.classList.remove("fa-sun");
-    toggleIcon.classList.add("fa-moon");
+      if (toggleIcon) {
+        toggleIcon.classList.remove("fa-moon");
+        toggleIcon.classList.add("fa-sun");
+      }
 
-    // Signature image
-    signatureImg.src = "assets/signature-dark.png";
+      signatureImg.src = "assets/signature-light.png";
+    } else {
+      body.classList.add("light");
+      body.classList.remove("dark");
+
+      if (toggleIcon) {
+        toggleIcon.classList.remove("fa-sun");
+        toggleIcon.classList.add("fa-moon");
+      }
+
+      signatureImg.src = "assets/signature-dark.png";
+    }
+
+    localStorage.setItem("theme", theme);
   }
 
-  localStorage.setItem("theme", theme);
-}
+  // Load saved theme
+  applyTheme(localStorage.getItem("theme") || "dark");
 
-/* Load saved theme (default = dark) */
-applyTheme(localStorage.getItem("theme") || "dark");
-
-/* Toggle click */
-toggleBtn.addEventListener("click", () => {
-  const nextTheme = body.classList.contains("dark") ? "light" : "dark";
-  applyTheme(nextTheme);
+  // Toggle click
+  toggleBtn.addEventListener("click", () => {
+    const nextTheme = body.classList.contains("dark") ? "light" : "dark";
+    applyTheme(nextTheme);
+  });
 });
 
 
