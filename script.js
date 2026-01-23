@@ -37,15 +37,23 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-reveals.forEach(el => observer.observe(el));
-const navLogo = document.getElementById("siteLogo");
-const heroLogo = document.getElementById("heroLogo");
+const themeToggle = document.getElementById("themeToggle");
+const logo = document.getElementById("siteLogo");
 
-function updateLogo(isLight) {
-  const src = isLight
-    ? "assets/signature-light.png"
-    : "assets/signature-dark.png";
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  const isLight = document.body.classList.contains("light");
 
-  navLogo.src = src;
-  heroLogo.src = src;
-}
+  // Fade out
+  logo.style.opacity = "0";
+
+  setTimeout(() => {
+    // Replace image ONLY (same element, same place)
+    logo.src = isLight
+      ? "assets/signature-light.png"
+      : "assets/signature-dark.png";
+
+    // Fade in
+    logo.style.opacity = "1";
+  }, 150);
+});
