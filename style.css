@@ -74,7 +74,6 @@ section {
   }
 }
 
-/* ================= NAVBAR ================= */
 /* ================= NAVBAR (ONE ROW ONLY) ================= */
 .navbar {
   display: flex;
@@ -377,6 +376,40 @@ section {
   border-radius: 999px;
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border);
+}
+/* ================= SKILLS VISIBILITY FIX ================= */
+
+/* ensure section shows */
+.skills-section {
+  padding: 120px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* force cards visible (fix reveal conflicts) */
+.skill-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none; /* reset if reveal applied */
+  color: var(--text);
+}
+
+/* ensure tags text visible */
+.skill-tags span {
+  color: var(--text);
+}
+
+/* responsive safety */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================= TIMELINE ================= */
