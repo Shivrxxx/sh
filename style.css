@@ -620,3 +620,29 @@ footer {
     height: 20px;
   }
 }
+/* ================= BRAND COLOR GLOW ================= */
+
+/* GitHub */
+.social-links a[href*="github"]:hover {
+  box-shadow: 0 0 18px rgba(24, 23, 23, 0.6);
+}
+
+/* LinkedIn */
+.social-links a[href*="linkedin"]:hover {
+  box-shadow: 0 0 18px rgba(10, 102, 194, 0.6);
+}
+
+/* Behance */
+.social-links a[href*="behance"]:hover {
+  box-shadow: 0 0 18px rgba(23, 105, 255, 0.6);
+}
+
+/* Gmail */
+.social-links a[href^="mailto"]:hover {
+  box-shadow: 0 0 18px rgba(234, 67, 53, 0.6);
+}
+
+/* Phone / WhatsApp */
+.social-links a[href^="tel"]:hover {
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.6);
+}
