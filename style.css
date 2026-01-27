@@ -1079,48 +1079,40 @@ section {
 }
 /* ================= PHONE ICON ================= */
 
+/* ================= PHONE ICON (NO BACKGROUND) ================= */
+
 .nav-call {
-  width: 38px;
-  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
 
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: transparent;
+  width: auto;
+  height: auto;
 
-  transition: transform 0.25s ease, background 0.25s ease;
+  background: none !important;   /* ❌ remove shade */
+  border: none !important;       /* ❌ remove circle */
+  padding: 0;
+
+  transition: transform 0.25s ease;
 }
 
-/* DEFAULT: WHITE */
+/* icon default */
 .nav-call i {
-  font-size: 32px;
-  color: #ffffff; /* white by default */
-  transition: color 0.25s ease;
+  font-size: 20px;
+  color: #ffffff;               /* white */
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-/* HOVER: GREEN */
+/* hover → green icon ONLY */
 .nav-call:hover i {
-  color: #25d366; /* WhatsApp green */
-}
-
-/* subtle hover lift */
-.nav-call:hover {
-  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;               /* green */
   transform: translateY(-2px);
 }
 
-/* ================= MOBILE ================= */
+/* mobile size */
 @media (max-width: 768px) {
-  .nav-call {
-    width: 44px;
-    height: 44px;
-  }
-
   .nav-call i {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -1202,7 +1194,6 @@ footer {
     flex-direction: column;
   }
 }
-/* ================= SOCIAL LINKS ================= */
 /* ================= SOCIAL ICONS ================= */
 
 .social-links {
