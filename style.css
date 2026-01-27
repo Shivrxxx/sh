@@ -1077,7 +1077,7 @@ section {
   background: var(--card);
   border: 1px solid var(--border);
 }
-/* ================= PHONE ICON (FINAL) ================= */
+/* ================= PHONE ICON ================= */
 
 .nav-call {
   width: 38px;
@@ -1094,20 +1094,22 @@ section {
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
-/* phone icon */
+/* DEFAULT: WHITE */
 .nav-call i {
   font-size: 32px;
-  color: #ffffff !important; /* ALWAYS WHITE */
+  color: #ffffff; /* white by default */
+  transition: color 0.25s ease;
 }
 
-/* hover effect (NO COLOR CHANGE) */
-.nav-call:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-2px);
-}
-
+/* HOVER: GREEN */
 .nav-call:hover i {
-  color: #ffffff !important; /* stay white */
+  color: #25d366; /* WhatsApp green */
+}
+
+/* subtle hover lift */
+.nav-call:hover {
+  background: rgba(37, 211, 102, 0.12);
+  transform: translateY(-2px);
 }
 
 /* ================= MOBILE ================= */
@@ -1121,6 +1123,7 @@ section {
     font-size: 20px;
   }
 }
+
 
 /* ================= FOOTER ================= */
 footer {
