@@ -1205,32 +1205,6 @@ footer {
   }
 }
 /* ================= SOCIAL LINKS ================= */
-/* ================= ICON CONTAINER ================= */
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  margin-top: 32px;
-}
-
-/* ================= ICON BUTTON ================= */
-.social-links a {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-/* ================= SOCIAL ICONS ================= */
 /* ================= SOCIAL ICONS ================= */
 
 .social-links {
@@ -1238,6 +1212,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 28px;
+  margin-top: 32px;
 }
 
 /* link reset */
@@ -1252,10 +1227,11 @@ footer {
   transition: transform 0.25s ease;
 }
 
-/* icon base */
+/* icon base — WHITE */
 .social-links i {
-  font-size: 28px;              /* ⬅ logo size */
-  transition: transform 0.25s ease, filter 0.25s ease;
+  font-size: 28px;
+  color: #ffffff; /* default white */
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 /* scale on hover */
@@ -1263,32 +1239,31 @@ footer {
   transform: scale(1.12);
 }
 
-/* ================= BRAND COLORS ================= */
-.fa-github   { color: #181717; }
-.fa-linkedin { color: #0a66c2; }
-.fa-envelope { color: #ea4335; }
-.fa-whatsapp { color: #25d366; }
-.fa-behance  { color: #1769ff; }
+/* ================= BRAND COLOR ON HOVER / CLICK ================= */
 
-/* ================= GLOW EFFECT ================= */
-.social-links a:hover .fa-github {
-  filter: drop-shadow(0 0 10px rgba(24,23,23,0.6));
+.social-links a:hover .fa-github,
+.social-links a:active .fa-github {
+  color: #181717;
 }
 
-.social-links a:hover .fa-linkedin {
-  filter: drop-shadow(0 0 12px rgba(10,102,194,0.75));
+.social-links a:hover .fa-linkedin,
+.social-links a:active .fa-linkedin {
+  color: #0a66c2;
 }
 
-.social-links a:hover .fa-envelope {
-  filter: drop-shadow(0 0 12px rgba(234,67,53,0.7));
+.social-links a:hover .fa-envelope,
+.social-links a:active .fa-envelope {
+  color: #ea4335;
 }
 
-.social-links a:hover .fa-whatsapp {
-  filter: drop-shadow(0 0 12px rgba(37,211,102,0.7));
+.social-links a:hover .fa-whatsapp,
+.social-links a:active .fa-whatsapp {
+  color: #25d366;
 }
 
-.social-links a:hover .fa-behance {
-  filter: drop-shadow(0 0 12px rgba(23,105,255,0.7));
+.social-links a:hover .fa-behance,
+.social-links a:active .fa-behance {
+  color: #1769ff;
 }
 
 /* ================= MOBILE ================= */
@@ -1298,6 +1273,6 @@ footer {
   }
 
   .social-links i {
-    font-size: 30px; /* slightly bigger on mobile */
+    font-size: 30px;
   }
 }
