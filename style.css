@@ -1122,7 +1122,7 @@ footer {
   text-align: center;
   padding: 30px;
   color: var(--muted);
-  border-top: 1px solid var(--border);
+  border-top: 0px solid var(--border);
 }
 
 /* ================= REVEAL ================= */
