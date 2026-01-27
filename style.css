@@ -75,23 +75,19 @@ section {
 }
 
 /* ================= NAVBAR ================= */
-.nav-right {
+./* NAVBAR LAYOUT */
+.navbar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 28px;
-}
-.nav-right {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 28px;
-}
-.nav-right {
-  display: flex;
   justify-content: space-between;
+}
+
+/* MENU ALIGN RIGHT */
+.nav-right {
+  display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: flex-end;
+  gap: 28px;
 }
 
 
