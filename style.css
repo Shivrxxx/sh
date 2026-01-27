@@ -543,14 +543,45 @@ section {
 
 /* ================= PROJECTS ================= */
 
+/* ================= PROJECTS SECTION ================= */
+
+.projects-section {
+  padding: 120px 40px;
+}
+
+/* Header */
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+}
+
+.section-header p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Category title */
+.project-category {
+  max-width: calc(520px * 2 + 40px);
+  margin: 80px auto 32px;
+  font-size: 17px;
+  color: var(--muted);
+}
+
+/* Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 520px);
   gap: 40px;
   justify-content: center;
-  align-items: start;
 }
 
+/* Card (520 × 450) */
 .project-card {
   width: 520px;
   height: 450px;
@@ -568,6 +599,7 @@ section {
   box-shadow: 0 20px 60px rgba(0,0,0,0.55);
 }
 
+/* Image (520 × 260) */
 .project-media {
   height: 260px;
   overflow: hidden;
@@ -579,6 +611,7 @@ section {
   object-fit: cover;
 }
 
+/* Content */
 .project-content {
   flex: 1;
   padding: 22px 26px;
@@ -592,26 +625,25 @@ section {
 
 .project-content p {
   flex-grow: 1;
-  color: var(--muted);
   line-height: 1.6;
-}
-
-.project-content .skill-tags {
-  margin-top: auto;
-}
-/* ================= PROJECT CATEGORY ALIGN FIX ================= */
-
-.project-category {
-  max-width: calc(520px * 2 + 40px); /* 2 cards + gap */
-  margin: 80px auto 32px;            /* center align */
-  padding-left: 4px;                 /* optical alignment */
-  font-size: 17px;
   color: var(--muted);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
 }
 
 /* ================= RESPONSIVE ================= */
 
-/* Tablet */
 @media (max-width: 1100px) {
   .projects-grid {
     grid-template-columns: 1fr;
@@ -622,7 +654,6 @@ section {
   }
 }
 
-/* Mobile (scale down proportionally) */
 @media (max-width: 600px) {
   .project-card {
     width: 100%;
@@ -630,18 +661,10 @@ section {
   }
 
   .project-media {
-    width: 100%;
     height: auto;
-    aspect-ratio: 2 / 1; /* keeps 520:260 ratio */
-  }
-
-  .project-content {
-    height: auto;
+    aspect-ratio: 2 / 1;
   }
 }
-
-
-
 
 /* ================= CONTACT ================= */
 .contact-cards {
