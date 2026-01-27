@@ -76,18 +76,44 @@ document.querySelectorAll(
 
 
 /* =========================================================
-   MOBILE HAMBURGER MENU (animated + spacing safe)
+   STICKY NAVBAR + MOBILE MENU LOGIC (FINAL)
 ========================================================= */
+
+const navbar = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  // sticky background on scroll
+  if (window.scrollY > 60) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+
+  // auto close mobile menu on scroll
+  if (navMenu.classList.contains("active")) {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("open");
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+/* =========================================================
+   MOBILE HAMBURGER MENU
+========================================================= */
+
 if (hamburger && navMenu) {
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+  hamburger.addEventListener("click", e => {
+    e.stopPropagation();
     hamburger.classList.toggle("open");
+    navMenu.classList.toggle("active");
   });
 
-  // close menu on link click (mobile UX)
+  // close on link click
   navMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
@@ -96,6 +122,17 @@ if (hamburger && navMenu) {
   });
 }
 
+/* close menu when clicking outside */
+document.addEventListener("click", e => {
+  if (
+    navMenu.classList.contains("active") &&
+    !navMenu.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("open");
+  }
+});
 
 /* =========================================================
    OPTIONAL: NAV ACTIVE STATE ON SCROLL
