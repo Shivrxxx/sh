@@ -631,6 +631,15 @@ section {
     height: auto;
   }
 }
+/* ================= PROJECT CATEGORY ALIGN FIX ================= */
+
+.project-category {
+  max-width: calc(520px * 2 + 40px); /* 2 cards + gap */
+  margin: 80px auto 32px;            /* center align */
+  padding-left: 4px;                 /* optical alignment */
+  font-size: 17px;
+  color: var(--muted);
+}
 
 
 
