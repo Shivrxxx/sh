@@ -720,6 +720,105 @@ section {
   color: var(--muted);
   line-height: 1.6;
 }
+/* ======================================================
+   STICKY NAVBAR
+   ====================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* when scrolled */
+.navbar.scrolled {
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* ======================================================
+   HAMBURGER BUTTON
+   ====================================================== */
+
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* open state */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ======================================================
+   MOBILE MENU
+   ====================================================== */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 0;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  .nav-right.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
 
 /* ================= CATEGORY TITLE ================= */
 
