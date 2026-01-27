@@ -413,12 +413,14 @@ section {
 }
 
 /* ================= TIMELINE ================= */
+/* ================= TIMELINE ================= */
 .timeline {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
+/* center vertical line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -430,21 +432,31 @@ section {
   transform: translateX(-50%);
 }
 
+/* item */
 .timeline-item {
   width: 50%;
   padding: 0 40px;
   margin-bottom: 80px;
   position: relative;
+
+  /* 🔒 FORCE VISIBILITY (fix reveal issues) */
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
 }
 
+/* left side */
 .timeline-item.left {
   text-align: right;
 }
 
+/* right side */
 .timeline-item.right {
   left: 50%;
+  text-align: left;
 }
 
+/* dot */
 .timeline-dot {
   position: absolute;
   top: 18px;
@@ -455,8 +467,79 @@ section {
   right: -7px;
 }
 
+/* dot for right items */
 .timeline-item.right .timeline-dot {
   left: -7px;
+  right: auto;
+}
+
+/* card */
+.timeline-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover */
+.timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* title */
+.timeline-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* date */
+.timeline-date {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+/* description */
+.timeline-card p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* tags reuse */
+.timeline-card .skill-tags span {
+  color: var(--text);
+}
+
+/* ================= MOBILE (STACKED) ================= */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-dot {
+    left: 1px;
+    right: auto;
+  }
+
+  .timeline-item.right .timeline-dot {
+    left: 1px;
+  }
 }
 
 /* ================= PROJECTS ================= */
