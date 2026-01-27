@@ -14,20 +14,32 @@
 </head>
 <body>
 
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <img src="assets/sivaramkumar-sign.png" alt="Loading">
+</div>
+
 <!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="nav-left">
     <img src="assets/sivaramkumar-sign.png" alt="Signature" class="nav-signature">
   </div>
 
-  <nav class="nav-right">
+  <nav class="nav-right" id="navMenu">
     <a href="#home" class="nav-link active">Home</a>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#experience" class="nav-link">Experience</a>
     <a href="#projects" class="nav-link">Projects</a>
     <a href="#contact" class="nav-link">Contact</a>
-    <span class="theme-toggle">🌙</span>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </nav>
+
+  <!-- Mobile Hamburger -->
+  <button id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
 <!-- ================= HERO ================= -->
@@ -41,9 +53,11 @@
     <h1>Hello, I'm</h1>
     <img src="assets/sivaramkumar-sign.png" class="signature" alt="Sivaramkumar">
 
-    <h2>Designer / Digital Marketer / Beginner Web Developer</h2>
+    <h2 class="animate-text">
+      Designer / Digital Marketer / Beginner Web Developer
+    </h2>
 
-    <p class="description">
+    <p class="description animate-text">
       I'm a creative designer and digital marketer who loves turning ideas into visuals
       that connect with people and drive results.
     </p>
@@ -54,9 +68,18 @@
     </div>
 
     <div class="stats">
-      <div class="stat"><h3>20+</h3><span>Projects</span></div>
-      <div class="stat"><h3>2+</h3><span>Years Exp</span></div>
-      <div class="stat"><h3>100%</h3><span>Client Satisfaction</span></div>
+      <div class="stat">
+        <h3>20+</h3>
+        <span>Projects</span>
+      </div>
+      <div class="stat">
+        <h3>2+</h3>
+        <span>Years Exp</span>
+      </div>
+      <div class="stat">
+        <h3>100%</h3>
+        <span>Client Satisfaction</span>
+      </div>
     </div>
 
   </div>
@@ -74,12 +97,70 @@
   </div>
 
   <div class="skills-grid">
-    <div class="skill-card"><h3>Design Tools</h3><div class="skill-tags"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Figma</span><span>Canva</span><span>Adobe XD</span></div></div>
-    <div class="skill-card"><h3>Digital Marketing</h3><div class="skill-tags"><span>SEO</span><span>Social Media Marketing</span><span>Content Marketing</span><span>Google Analytics</span><span>Email Marketing</span></div></div>
-    <div class="skill-card"><h3>Web Development</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>Git</span></div></div>
-    <div class="skill-card"><h3>UI / UX Design</h3><div class="skill-tags"><span>User Interface Design</span><span>User Experience</span><span>Wireframing</span><span>Prototyping</span><span>Visual Design</span></div></div>
-    <div class="skill-card"><h3>Creative Skills</h3><div class="skill-tags"><span>Ad Creatives</span><span>Banner Design</span><span>Logo Design</span><span>Brand Identity</span><span>Typography</span></div></div>
-    <div class="skill-card"><h3>Marketing Strategy</h3><div class="skill-tags"><span>Brand Strategy</span><span>Content Strategy</span><span>Campaign Planning</span><span>Performance Analysis</span></div></div>
+    <div class="skill-card">
+      <h3>Design Tools</h3>
+      <div class="skill-tags">
+        <span>Adobe Photoshop</span>
+        <span>Adobe Illustrator</span>
+        <span>Figma</span>
+        <span>Canva</span>
+        <span>Adobe XD</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Digital Marketing</h3>
+      <div class="skill-tags">
+        <span>SEO</span>
+        <span>Social Media Marketing</span>
+        <span>Content Marketing</span>
+        <span>Google Analytics</span>
+        <span>Email Marketing</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Web Development</h3>
+      <div class="skill-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Git</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>UI / UX Design</h3>
+      <div class="skill-tags">
+        <span>User Interface Design</span>
+        <span>User Experience</span>
+        <span>Wireframing</span>
+        <span>Prototyping</span>
+        <span>Visual Design</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Creative Skills</h3>
+      <div class="skill-tags">
+        <span>Ad Creatives</span>
+        <span>Banner Design</span>
+        <span>Logo Design</span>
+        <span>Brand Identity</span>
+        <span>Typography</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Marketing Strategy</h3>
+      <div class="skill-tags">
+        <span>Brand Strategy</span>
+        <span>Content Strategy</span>
+        <span>Campaign Planning</span>
+        <span>Performance Analysis</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -96,8 +177,17 @@
       <div class="timeline-card">
         <h3>Designer & Digital Marketer</h3>
         <span class="timeline-date">2023 – Present · Freelance · Remote</span>
-        <p>Creating eye-catching designs, SEO campaigns, brand identities, and responsive websites.</p>
-        <div class="skill-tags"><span>Adobe Photoshop</span><span>Figma</span><span>SEO</span><span>HTML</span><span>CSS</span></div>
+        <p>
+          Creating eye-catching designs, SEO campaigns, brand identities,
+          and responsive websites.
+        </p>
+        <div class="skill-tags">
+          <span>Adobe Photoshop</span>
+          <span>Figma</span>
+          <span>SEO</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
       </div>
     </div>
 
@@ -106,8 +196,17 @@
       <div class="timeline-card">
         <h3>Web Design & Marketing Projects</h3>
         <span class="timeline-date">2022 – 2023 · Personal Projects · Remote</span>
-        <p>Developed portfolio websites and learning-based tools with strong UI/UX fundamentals.</p>
-        <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canva</span><span>Content Creation</span></div>
+        <p>
+          Developed portfolio websites and learning-based tools
+          with strong UI/UX fundamentals.
+        </p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Canva</span>
+          <span>Content Creation</span>
+        </div>
       </div>
     </div>
   </div>
@@ -115,104 +214,76 @@
 
 <!-- ================= PROJECTS ================= -->
 <section class="projects-section" id="projects">
-
   <div class="section-header">
     <h2>Featured Projects</h2>
     <p>Explore my work across web development and digital design</p>
   </div>
 
-  <!-- WEB DEVELOPMENT -->
   <h3 class="project-category">— Web Development</h3>
 
   <div class="projects-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card reveal">
+    <div class="project-card">
       <div class="project-media">
         <img src="assets/project-1.jpg" alt="Website Spam Detection">
       </div>
       <div class="project-content">
         <h4>Website Spam Detection</h4>
         <p>
-          An intelligent spam detection system that helps identify and filter spam
-          content on websites using modern web technologies.
+          An intelligent spam detection system that helps identify
+          and filter spam content on websites.
         </p>
-        <div class="skill-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Machine Learning</span>
-        </div>
+        <a class="view-work" href="#" target="_blank">View Work →</a>
       </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-card reveal">
+    <div class="project-card">
       <div class="project-media">
         <img src="assets/project-2.jpg" alt="Personal Portfolio Website">
       </div>
       <div class="project-content">
         <h4>Personal Portfolio Website</h4>
         <p>
-          A responsive portfolio website showcasing skills, projects, and
-          professional experience with smooth animations.
+          A responsive portfolio website showcasing skills,
+          projects, and experience with smooth animations.
         </p>
-        <div class="skill-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>Responsive Design</span>
-        </div>
+        <a class="view-work" href="#" target="_blank">View Work →</a>
       </div>
     </div>
-
   </div>
 
-  <!-- DIGITAL DESIGN & MARKETING -->
   <h3 class="project-category">— Digital Design & Marketing</h3>
 
   <div class="projects-grid">
-
-    <!-- Project 3 -->
-    <div class="project-card reveal">
+    <div class="project-card">
       <div class="project-media">
         <img src="assets/project-3.jpg" alt="Brand Identity Design">
       </div>
       <div class="project-content">
         <h4>Brand Identity Design</h4>
         <p>
-          Creative brand identity projects including logo design, color palettes,
-          and visual guidelines that strengthen brand presence.
+          Logo design, color palettes, and visual systems
+          that strengthen brand presence.
         </p>
-        <div class="skill-tags">
-          <span>Adobe Photoshop</span>
-          <span>Illustrator</span>
-          <span>Figma</span>
-        </div>
+        <a class="view-work" href="https://www.behance.net/shivrxxx" target="_blank">View Work →</a>
       </div>
     </div>
 
-    <!-- Project 4 -->
-    <div class="project-card reveal">
+    <div class="project-card">
       <div class="project-media">
         <img src="assets/project-4.jpg" alt="Social Media Campaigns">
       </div>
       <div class="project-content">
         <h4>Social Media Campaigns</h4>
         <p>
-          Engaging social media creatives and ad campaigns designed to boost brand
-          visibility and conversions across platforms.
+          Engaging creatives and ad campaigns designed
+          to boost visibility and conversions.
         </p>
-        <div class="skill-tags">
-          <span>Canva</span>
-          <span>Adobe XD</span>
-          <span>Social Media Marketing</span>
-        </div>
+        <a class="view-work" href="https://www.behance.net/shivrxxx" target="_blank">View Work →</a>
       </div>
     </div>
-
   </div>
-
 </section>
+
 <!-- ================= CONTACT ================= -->
 <section class="contact-section" id="contact">
   <div class="section-header">
@@ -220,17 +291,12 @@
     <p>Ready to bring your next project to life? Let’s connect.</p>
   </div>
 
-  <div class="contact-cards">
-    <div class="contact-card">✉ Email <strong>shivxxx@gmail.com</strong></div>
-    <div class="contact-card">📞 Phone <strong>+91 86672 31973</strong></div>
-  </div>
-
-  <div class="social-card">
-    <h3>Connect With Me</h3>
-    <p>Follow my work and stay updated</p>
-    <div class="social-links">
-      <a>GitHub</a><a>LinkedIn</a><a>Behance</a><a>Email</a>
-    </div>
+  <div class="social-links icons-only">
+    <a href="https://github.com/shivrxxx" target="_blank" aria-label="GitHub">🐙</a>
+    <a href="https://www.linkedin.com/in/sivaramkumar4657" target="_blank" aria-label="LinkedIn">🔗</a>
+    <a href="https://www.behance.net/shivrxxx" target="_blank" aria-label="Behance">🎨</a>
+    <a href="mailto:shivrxxx@gmail.com" aria-label="Email">✉️</a>
+    <a href="tel:+918667231973" aria-label="Phone">📞</a>
   </div>
 </section>
 
