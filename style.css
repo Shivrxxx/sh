@@ -646,3 +646,51 @@ footer {
 .social-links a[href^="tel"]:hover {
   box-shadow: 0 0 18px rgba(37, 211, 102, 0.6);
 }
+/* Smooth scale for all icons */
+.social-links a {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.social-links a:hover {
+  transform: scale(1.08); /* subtle, professional */
+}
+/* ================= GLOW PULSE KEYFRAMES ================= */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50%  { box-shadow: 0 0 18px var(--glow-color); }
+  100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+}
+
+/* ================= BRAND COLORS ================= */
+
+/* GitHub */
+.social-links a[href*="github"]:hover {
+  --glow-color: rgba(24, 23, 23, 0.7);
+  animation: glowPulse 1.6s infinite;
+}
+
+/* LinkedIn */
+.social-links a[href*="linkedin"]:hover {
+  --glow-color: rgba(10, 102, 194, 0.7);
+  animation: glowPulse 1.6s infinite;
+}
+
+/* Behance */
+.social-links a[href*="behance"]:hover {
+  --glow-color: rgba(23, 105, 255, 0.7);
+  animation: glowPulse 1.6s infinite;
+}
+
+/* Gmail */
+.social-links a[href^="mailto"]:hover {
+  --glow-color: rgba(234, 67, 53, 0.7);
+  animation: glowPulse 1.6s infinite;
+}
+
+/* Phone / WhatsApp */
+.social-links a[href^="tel"]:hover {
+  --glow-color: rgba(37, 211, 102, 0.7);
+  animation: glowPulse 1.6s infinite;
+}
