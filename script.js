@@ -120,3 +120,9 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+document.querySelectorAll(".view-project-btn").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    window.open(btn.dataset.link, "_blank");
+  });
+});
